@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Coin Flip</title>
+
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <button onclick="
+        flag = 0;
+        let randomNumber = Math.random();
+        if (randomNumber > 0.5){
+            coinValue = 'Heads';
+        } else {
+            coinValue = 'Tails';
+        }
+        console.log(coinValue);
+        ">Flip</button>
+
+        <p>
+            Make a guess
+        </p>
+
+        <button onclick="
+        if (flag) {
+            alert('Please flip the coin again to play');
+        } else {
+            flag = 1;
+            if(coinValue === 'Heads'){
+                alert('Congrats!\nYou won.');
+            } else {
+                alert('Better luck next time.');
+            }
+        }
+        ">Heads</button>
+        <button onclick="
+        if (flag) {
+            alert('Please flip the coin again to play');
+        } else {
+            flag = 1;
+            if(coinValue === 'Tails'){
+                alert('Congrats!\nYou won.');
+            } else {
+                alert('Better luck next time.');
+            }
+        }
+        ">Tails</button>
+
+
+
+        <script>
+            let coinValue = '';
+            let flag = 0;
+        </script>
+    </body>
+</html>

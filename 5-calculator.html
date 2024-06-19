@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculator</title>
+        <style>
+            button {
+                margin-bottom: 10px;
+                margin-right: 5px;
+                height: 30px;
+                width: 30px;
+            }
+
+            .clear {
+                width: 50px;
+            }
+
+            .mod {
+                width: 50px
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>
+            CALCULATOR
+        </p>
+
+        <p>
+            <button onclick="
+            calculationDisplay += 1;
+            console.log(calculationDisplay)
+            calculation += 1;
+            ">1</button>
+            <button onclick="
+            calculationDisplay += 2;
+            console.log(calculationDisplay)
+            calculation += 2;
+            ">2</button>
+            <button onclick="
+            calculationDisplay += 3;
+            console.log(calculationDisplay)
+            calculation += 3;
+            ">3</button>
+            <button onclick="
+            calculationDisplay += ' + ';
+            console.log(calculationDisplay)
+            ">+</button>
+        </p>
+
+        <p>
+            <button onclick="
+            calculationDisplay += 1;
+            console.log(calculationDisplay)
+            calculation += 1;
+            ">4</button>
+            <button onclick="
+            calculationDisplay += 2;
+            console.log(calculationDisplay)
+            calculation += 2;
+            ">5</button>
+            <button onclick="
+            calculationDisplay += 3;
+            console.log(calculationDisplay)
+            calculation += 3;
+            ">6</button>
+            <button onclick="
+            calculationDisplay += ' + ';
+            console.log(calculationDisplay)
+            ">-</button>
+        </p>
+
+        <p>
+            <button onclick="
+            calculationDisplay += 1;
+            console.log(calculationDisplay)
+            calculation += 1;
+            ">7</button>
+            <button onclick="
+            calculationDisplay += 2;
+            console.log(calculationDisplay)
+            calculation += 2;
+            ">8</button>
+            <button onclick="
+            calculationDisplay += 3;
+            console.log(calculationDisplay)
+            calculation += 3;
+            ">9</button>
+            <button onclick="
+            calculationDisplay += ' + ';
+            console.log(calculationDisplay)
+            ">*</button>
+        </p>
+
+        <p>
+            <button onclick="
+            calculationDisplay += 1;
+            console.log(calculationDisplay)
+            calculation += 1;
+            ">0</button>
+            <button onclick="
+            calculationDisplay += 2;
+            console.log(calculationDisplay)
+            calculation += 2;
+            ">.</button>
+            <button onclick="
+            calculationDisplay += 3;
+            console.log(calculationDisplay)
+            calculation += 3;
+            ">/</button>
+            <button onclick="
+            calculationDisplay += ' + ';
+            console.log(calculationDisplay)
+            ">%</button>
+        </p>
+
+        <p>
+            <button onclick="
+            calculationDisplay += 1;
+            console.log(calculationDisplay)
+            calculation += 1;
+            ">=</button>
+            <button onclick="
+            calculationDisplay += 2;
+            console.log(calculationDisplay)
+            calculation += 2;
+            " class="mod">MOD</button>
+            <button onclick="
+            calculationDisplay += 3;
+            console.log(calculationDisplay)
+            calculation += 3;
+            " class="clear">clear</button>
+        </p>
+
+        <script>
+            let operator = '';
+            let operand1 = 0;
+            let operand2 = 0;
+            let calculationDisplay = '';
+        </script>
+    </body>
+</html>

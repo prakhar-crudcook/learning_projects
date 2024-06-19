@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website</title>
+    <style>
+      * {
+        font-size: 20px;
+      }
+
+      button {
+        font-size: 17px;
+        height: 30px;
+        border-width: 3px;
+      }
+
+      .add-to-cart {
+        background-color: yellow;
+        width: 120px;
+      }
+
+      .buy-now {
+        background-color: orange;
+        width: 120px;
+      }
+
+      .show-cart {
+        background-color: green;
+        color: white;
+        width: 120px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>Adults Plain Cotton T-shirt</p>
+
+    <p>Price: $7.99</p>
+
+    <p>
+      <button
+        class="buy-now"
+        onclick="console.log('Loading...'), alert('Purchased')"
+      >
+        Buy now
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="
+        updateCartQuantity(4);
+        "
+        class="add-4"
+      >
+        +4
+      </button>
+
+      <button
+        class="add-to-cart"
+        onclick="
+        updateCartQuantity(1);
+        "
+      >
+        Add to cart
+      </button>
+
+      <button
+        onclick="
+        updateCartQuantity(5);
+        "
+        class="add-5"
+      >
+        +5
+      </button>
+      <button
+        onclick="
+        alert(`${cartQuantity} items in the cart.`);
+        "
+        class="show-cart"
+      >
+        Show cart
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="
+        updateCartQuantity(-2);
+        "
+      >
+        -2
+      </button>
+      <button
+        onclick="
+        updateCartQuantity(-1);
+        "
+        class="remove"
+      >
+        Remove from cart
+      </button>
+      <button
+        onclick="
+        updateCartQuantity(-3);
+        "
+      >
+        -3
+      </button>
+      <button
+        onclick="
+        cartQuantity = 0;
+        alert('Cart emptied!');
+        "
+        class="empty"
+      >
+        Empty cart
+      </button>
+    </p>
+
+    <script>
+      let cartQuantity = 0;
+
+      function updateCartQuantity(addQuantity) {
+        let newQuantity = cartQuantity + addQuantity;
+        if(newQuantity <=10 && newQuantity >= 0){
+            if(addQuantity >= 0){
+                alert(`${addQuantity} items added to the cart.`);
+            } else {
+                alert(`${-1 * addQuantity} items removed from the cart.`);
+            }
+            cartQuantity = newQuantity;
+        } else if(addQuantity > 0) {
+            alert('The cart does not have enough space.')
+        } else {
+            alert('The cart does not have enough items.');
+        }
+      }
+    </script>
+  </body>
+</html>
